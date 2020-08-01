@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
+import ParticlesBg from './Components/Particles/Particles'
 import Navigation from './Components/Navigation/Navigation';
 import Rank from './Components/Rank/Rank';
 import Logo from './Components/Logo/Logo';
@@ -13,18 +13,6 @@ import './App.css';
 const app = new Clarifai.App({
   apiKey: 'a87102aacd6442b7bcc5e0b750c1dba1'
 });
-
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 100,
-      density: {
-        enable: true,
-        value_area: 700
-      }
-    }
-  }
-}
 
 const initialState = {
     input: '',
@@ -83,7 +71,7 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     app.models
-      .predict('c0c0ac362b03416da06ab3fa36fb58e3',
+      .predict('a403429f2ddf4b49b307e318f00e528b',
         this.state.input)
       .then(response => {
         if (response) {
@@ -114,15 +102,13 @@ class App extends Component {
     this.setState({ route: route });
   }
 
-
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
       <div className="App">
-        <Particles className='particles'
-          params={particlesOptions} />
+        <ParticlesBg />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
-        {route === 'home' // Ternary statemente to show only the sign in page over the others
+        {route === 'home'
           ? <div>
             <Logo />
             <Rank name={this.state.user.name} entries={this.state.user.entries} />
