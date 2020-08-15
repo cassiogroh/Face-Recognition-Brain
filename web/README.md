@@ -8,10 +8,10 @@
 * Face recognition tool provided by [Clarifai](https://www.clarifai.com/); <br/>
 
 ### Home page
-![Face recognition brain Home page](../public/webView/home.PNG)
+![Face recognition brain Home page](./public/webView/home.PNG)
 
 ### User page (after login)
-![Face recognition brain Home page](../public/webView/user_page.PNG)
+![Face recognition brain Home page](./public/webView/user_page.PNG)
 
 * You can acces the website and register your own account; <br/>
 
