@@ -9,15 +9,44 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+const sqlite3 = require('sqlite3').verbose();
+
+// const newdb = new sqlite3.Database("./database/database.sqlite");
+
+// newdb.run(`
+//     CREATE TABLE IF NOT EXISTS login (
+//         id INTEGER PRIMARY KEY AUTOINCREMENT,
+//         hash VARCHAR(100) NOT NULL,
+//         email TEXT UNIQUE
+//     )
+// `);
+
+// newdb.run(`
+//     CREATE TABLE IF NOT EXISTS users (
+//         id INTEGER PRIMARY KEY AUTOINCREMENT,
+//         name VARCHAR(100) NOT NULL,
+//         email TEXT UNIQUE,
+//         entries BIGINT,
+//         joined TIMESTAMP
+//     )
+// `);
+
 const db = knex({
-    client: 'pg',
+    client: 'sqlite3',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: '123',
-        database: 'postgres'
-    }
-});
+        filename: './database/database.sqlite'
+    },
+    useNullAsDefault: true,
+})
+// const db = knex({
+//     client: 'pg',
+//     connection: {
+//         host: '127.0.0.1',
+//         user: 'postgres',
+//         password: '123',
+//         database: 'postgres'
+//     }
+// });
 
 // db.select('*').from('users');
 app.use(express.json()); // enabling req.body
@@ -32,10 +61,3 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) });
 app.listen(process.env.PORT || 3000, () => {
     console.log(`app is ruinning on port ${process.env.PORT || '3000'}`);
 });
-
-// const PORT = process.env.PORT;
-// app.listen(PORT, () => {
-//     console.log(`app is ruinning on port ${PORT}`);
-// });
-
-// PORT=3000 node server.js
