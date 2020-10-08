@@ -49,4 +49,4 @@ This project is under MIT license. See [LICENSE](LICENSE.md) for more details.
 
 ---
 
-Made with 💙 by Cassio Groh :wave:
+Made with 💙 by [Cassio Groh](https://www.linkedin.com/in/cassiogroh/) :wave:
