@@ -1,6 +1,6 @@
 <h1 align="center">
-    <img alt="Face recognition brain" title="Face recognition brain" src=".github/logo.png" /> </br>
-    Face recognition brain
+    <img alt="Face recognition brain" title="Face recognition brain" src=".github/logo.png" width="60%" /> </br>
+    Face Recognition Brain
 </h1>
 
 <p align="center">
