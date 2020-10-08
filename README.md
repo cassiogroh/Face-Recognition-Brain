@@ -1,9 +1,7 @@
 <h1 align="center">
     <img alt="Face recognition brain" title="Face recognition brain" src=".github/logo.png" />
-</h1>
-<h2 align="center">
     Face recognition brain
-</h2>
+</h1>
 
 <p align="center">
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -36,7 +34,7 @@ This project was developed with the following technologies:
 
 Face recognition brain is an app made to detect faces on given images using Clarifai API.
 
-## 👱🏽‍♂️ Running
+## 💻 Running
 
 You can run it locally by using the following commands:
 
