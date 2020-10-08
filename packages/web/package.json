@@ -1,5 +1,5 @@
 {
-  "name": "facerecognitionbrain",
+  "name": "@web/facerecognitionbrain",
   "version": "0.1.0",
   "homepage": "https://cassiogroh.github.io/FaceRecognitionApp",
   "private": true,

@@ -1,0 +1,22 @@
+{
+  "name": "face-recognition",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "build:web": "cd ./packages/web && npm run react-scripts build",
+    "start": "cd ./packages/server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cassiogroh/Face-recognition.git"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
