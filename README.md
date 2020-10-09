@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img alt="Face recognition" src=".github/user_page.PNG" width="70%">
+  <img alt="Face recognition" src=".github/mockup.png" width="70%">
 </p>
 
 ## 🚀 Technologies
